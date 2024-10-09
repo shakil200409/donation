@@ -1,8 +1,13 @@
-*{
-    font-family: "Lexend", sans-serif;
+* {
+  font-family: "Lexend", sans-serif;
 }
 
-body{
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.container{
+    max-width: 1024px;
+    
+}

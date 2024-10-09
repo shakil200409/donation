@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donation Bangladesh</title>
+    <!-- Link CSS -->
+     <link rel="stylesheet" href="style.css">
+
     <!-- Font Lexend-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +28,13 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: {},
+            colors: {
+                'light-coral' : '#F9F7F3',
+                'btn-green' : '#B4F461',
+                'dark-gray' : '#4d4d4d',
+                'light-gray' : '#b3b3b3'
+
+            },
           },
         },
       };
@@ -33,9 +42,21 @@
 
   </head>
   <body>
-    <header></header>
+    <header class="bg-light-coral sticky top-0 mb-10">
+        <section class="container mx-auto flex items-center justify-between  p-3 lg:p-0">
+            <button class="font-semibold text-xl px-7 py-3 bg-btn-green rounded-xl">Blog</button>
+            <div class="lg:flex items-center hidden">
+                <img class="m-5" src="assets/logo.png" alt="Logo">
+                <h2 class="font-semibold text-xl">Donate Bangladesh</h2>
+            </div>
+            <div class="flex items-center font-medium text-xl">
+                <img class="m-2" src="assets/coin.png" alt="Logo">
+                <h2 class="font-semibold text-xl">00</h2>
+                <p class="text-gray-500 ml-2">BDT</p>
+            </div>
+        </section>
+    </header>
     <main>
-        <h1></h1>
     </main>
     <footer></footer>
   </body>

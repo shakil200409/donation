@@ -1,29 +1,33 @@
-document.getElementById('btn-donate-feni').addEventListener('click', function(event){
+document
+  .getElementById("btn-donate-feni")
+  .addEventListener("click", function (event) {
     event.preventDefault();
-    
+
     // Getting number of amount donated by user
-    const donation = getInputNumberById('input-feni');
-    
+    const donation = getInputNumberById("input-feni");
+
     // Checking if donation is a number
-    const number = checkIsNAN(donation);
+    if (isNaN(donation)) {
+      alert("Failed to donate");
+      document.getElementById('input-feni').value = '';
+      return;
+    } else {
+      // Getting the present balance by number
+      const mainBalance = getBalanceNumberById("main-balance");
+      const feniBalance = getBalanceNumberById("feni-balance");
 
-    // Getting the present balance by number
-    const mainBalance = getBalanceNumberById('main-balance');
-    const feniBalance = getBalanceNumberById('feni-balance')
-
-    // Checking the balance of user
-    if(mainBalance < number){
-        alert('Insufficiant Balance!');
-        document.getElementById('input-feni').value = '';
+      // Checking the balance of user
+      if (mainBalance < donation) {
+        alert("Insufficiant Balance!");
+        document.getElementById("input-feni").value = "";
         return;
+      } else {
+        alert(`Congratulations! You donated ${donation}Tk.`);
+        const newBalanceFeni = feniBalance + donation;
+        const newMainBalance = mainBalance - donation;
+        document.getElementById("feni-balance").innerText = newBalanceFeni;
+        document.getElementById("main-balance").innerText = newMainBalance;
+        document.getElementById("input-feni").value = "";
+      }
     }
-    else{
-        alert(`Congratulations! You donated ${number}Tk.`)
-        const newBalanceFeni = feniBalance + number;
-        const newMainBalance = mainBalance - number;
-        document.getElementById('feni-balance').innerText = newBalanceFeni;
-        document.getElementById('main-balance').innerText = newMainBalance;
-        document.getElementById('input-feni').value = '';
-
-    }
-})
+  });

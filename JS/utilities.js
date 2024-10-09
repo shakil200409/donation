@@ -5,17 +5,6 @@ function getInputNumberById(id){
     return inputNumber;
 }
 
-// Checking if it is a number
-function checkIsNAN(input){
-    const inputNumber = input;
-    if(isNaN(input)){
-        alert('Failed to donate!');
-        return;
-    }
-    else{
-        return input;
-    }
-}
 
 // Getting the balance by number
 function getBalanceNumberById(id){

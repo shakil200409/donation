@@ -52,11 +52,12 @@
         </div>
         <div class="flex items-center font-medium text-xl">
           <img class="m-2" src="assets/coin.png" alt="Logo" />
-          <h2 class="font-semibold text-xl">00</h2>
+          <h2 id="main-balance" class="font-semibold text-xl">10000</h2>
           <p class="text-gray-500 ml-2">BDT</p>
         </div>
       </section>
     </header>
+
     <main>
       <section class="container">
         <div class="flex justify-center">
@@ -74,7 +75,7 @@
 
         <!-- Donation Cards -->
         <div class="mt-10 px-3 lg:px-0">
-          <!-- Card 1 start -->
+          <!-- Donation card for Noakhali start -->
           <div
             class="card lg:card-side grid lg:grid-cols-2 border-2 border-white-gray rounded-xl lg:rounded-3xl mb-10"
           >
@@ -93,7 +94,7 @@
                 <div
                   class="text-dark-gray font-semibold text-base flex items-center"
                 >
-                  <h2>00</h2>
+                  <h2 id="noakhali-balance">00</h2>
                   <span class="ml-1">BDT</span>
                 </div>
               </div>
@@ -112,12 +113,12 @@
                 efforts and making a positive impact on the lives of those in
                 need.
               </p>
-              <input
+              <input id="input-noakhali"
                 class="h-14 border-2 border-white-gray rounded-lg px-5 my-5"
                 type="text"
                 placeholder="Write Donation Amount"
               />
-              <button
+              <button id="btn-donate-noakhali"
                 class="h-14 bg-btn-green px-3 rounded-lg text-xl font-semibold"
               >
                 Donate Now
@@ -214,10 +215,16 @@
         </div>
       </section>
     </main>
+
     <footer class="bg-light-coral">
         <section class="container">
             <p class="text-lg text-dark-gray py-10 text-center">All Rights Reserved By &copy;Donation Bangladesh</p>
         </section>
     </footer>
+
+
+    <!-- JavaScript Links -->
+     <script src="JS/utilities.js"></script>
+     <script src="JS/donationNoakhali.js"></script>
   </body>
 </html>

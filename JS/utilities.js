@@ -53,7 +53,7 @@ function addToHistory(input, title){
 function donationConfirmMsg(input){
     const div = document.createElement('div');
     div.setAttribute('id', 'confirmation-card')
-    div.classList.add('bg-stone-100', 'my-10', 'rounded-xl', 'p-5', 'lg:p-10', 'flex', 'flex-col', 'items-center', 'w-1/2', 'lg:w-2/5', 'mx-auto', 'absolute', 'inset-x-0', 'left-0', 'top-3', 'lg:top-44', 'drop-shadow-2xl');  
+    div.classList.add('bg-stone-100', 'my-10', 'rounded-xl', 'p-5', 'lg:p-10', 'flex', 'flex-col', 'items-center', 'w-3/4', 'lg:w-2/5', 'mx-auto', 'absolute', 'inset-x-0', 'left-0', 'top-14', 'lg:top-44', 'drop-shadow-2xl');  
     div.innerHTML = `
     <h1 class="text-2xl lg:text-3xl font-bold mb-5">Congratulations!</h1>
     <div class="h-10 w-10 lg:h-14 lg:w-14">

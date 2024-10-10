@@ -61,12 +61,12 @@
     <main>
       <section class="container">
         <div class="flex justify-center">
-          <button
+          <button id="btn-donation"
             class="font-semibold text-xl px-7 py-3 rounded-xl border border-light-gray hover:border-none hover:bg-btn-green text-dark-gray hover:text-black mr-5"
           >
             Donation
           </button>
-          <button
+          <button id="btn-history"
             class="font-semibold text-xl px-7 py-3 rounded-xl border border-light-gray hover:border-none hover:bg-btn-green text-dark-gray hover:text-black"
           >
             History
@@ -74,7 +74,7 @@
         </div>
 
         <!-- Donation Cards -->
-        <div class="mt-10 px-3 lg:px-0">
+        <div id="donation-cards-container" class="mt-10 px-3 lg:px-0">
           <!-- Donation card for Noakhali start -->
           <div
             class="card lg:card-side grid lg:grid-cols-2 border-2 border-white-gray rounded-xl lg:rounded-3xl mb-10"
@@ -113,12 +113,14 @@
                 efforts and making a positive impact on the lives of those in
                 need.
               </p>
-              <input id="input-noakhali"
+              <input
+                id="input-noakhali"
                 class="h-14 border-2 border-white-gray rounded-lg px-5 my-5"
                 type="text"
                 placeholder="Write Donation Amount"
               />
-              <button id="btn-donate-noakhali"
+              <button
+                id="btn-donate-noakhali"
                 class="h-14 bg-btn-green px-3 rounded-lg text-xl font-semibold"
               >
                 Donate Now
@@ -154,14 +156,23 @@
                 Donate for Flood Relief in Feni,Bangladesh
               </h2>
               <p class="text-dark-gray">
-                The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                The recent floods in Feni have devastated local communities,
+                leading to severe disruption and loss. Your generous donation
+                will help provide immediate aid, including food, clean water,
+                and medical supplies, to those affected by this calamity.
+                Together, we can offer crucial support and help rebuild lives in
+                the aftermath of this disaster. Every contribution counts
+                towards making a real difference. Please consider donating today
+                to assist those in urgent need.
               </p>
-              <input id="input-feni"
+              <input
+                id="input-feni"
                 class="h-14 border-2 border-white-gray rounded-lg px-5 my-5"
                 type="text"
                 placeholder="Write Donation Amount"
               />
-              <button id="btn-donate-feni"
+              <button
+                id="btn-donate-feni"
                 class="h-14 bg-btn-green px-3 rounded-lg text-xl font-semibold"
               >
                 Donate Now
@@ -197,14 +208,24 @@
                 Aid for Injured in the Quota Movement
               </h2>
               <p class="text-dark-gray">
-                The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                The recent Quota movement has resulted in numerous injuries and
+                significant hardship for many individuals. Your support is
+                crucial in providing medical assistance, rehabilitation, and
+                necessary supplies to those affected. By contributing, you help
+                ensure that injured individuals receive the care and support
+                they need during this challenging time. Every donation plays a
+                vital role in alleviating their suffering and aiding in their
+                recovery. Please consider making a donation to support these
+                brave individuals in their time of need.
               </p>
-              <input id="input-aid"
+              <input
+                id="input-aid"
                 class="h-14 border-2 border-white-gray rounded-lg px-5 my-5"
                 type="text"
                 placeholder="Write Donation Amount"
               />
-              <button id="btn-donate-aid"
+              <button
+                id="btn-donate-aid"
                 class="h-14 bg-btn-green px-3 rounded-lg text-xl font-semibold"
               >
                 Donate Now
@@ -213,20 +234,28 @@
           </div>
           <!-- End -->
         </div>
+
+        <!-- History Part -->
+         <div id="history-section" class="mt-10 px-3 lg:px-0 hidden">
+         </div>
       </section>
+
     </main>
 
     <footer class="bg-light-coral">
-        <section class="container">
-            <p class="text-lg text-dark-gray py-10 text-center">All Rights Reserved By &copy;Donation Bangladesh</p>
-        </section>
+      <section class="container">
+        <p class="text-lg text-dark-gray py-10 text-center">
+          All Rights Reserved By &copy;Donation Bangladesh
+        </p>
+      </section>
     </footer>
 
-
     <!-- JavaScript Links -->
-     <script src="JS/utilities.js"></script>
-     <script src="JS/donationNoakhali.js"></script>
-     <script src="JS/donationFeni.js"></script>
-     <script src="JS/donationForAid.js"></script>
+    <script src="JS/utilities.js"></script>
+    <script src="JS/donation.js"></script>
+    <script src="JS/history.js"></script>
+    <script src="JS/donationNoakhali.js"></script>
+    <script src="JS/donationFeni.js"></script>
+    <script src="JS/donationForAid.js"></script>
   </body>
 </html>

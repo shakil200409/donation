@@ -21,13 +21,17 @@ document
         alert("Insufficiant Balance!");
         document.getElementById("input-noakhali").value = "";
         return;
-      } else {
+      } 
+      else {
         alert(`Congratulations! You donated ${donation}Tk.`);
         const newBalancenoakhali = noakhaliBalance + donation;
         const newMainBalance = mainBalance - donation;
         document.getElementById("noakhali-balance").innerText = newBalancenoakhali;
         document.getElementById("main-balance").innerText = newMainBalance;
         document.getElementById("input-noakhali").value = "";
+
+        const title = document.getElementById('noakhali-title').innerText;
+        addToHistory(donation, title);
       }
     }
   });

@@ -36,3 +36,14 @@ function activeBtn(id){
     document.getElementById(id).classList.remove('border');
     document.getElementById(id).classList.add('bg-btn-green', 'text-black');
 }
+
+// Adding history function
+function addToHistory(input, title){
+    const div = document.createElement('div');
+    div.classList.add('border-2', 'border-white-gray', 'rounded-xl', 'lg:rounded-3xl', 'p-5')
+    div.innerHTML = `
+    <h2 class="text-xl font-bold">${input} Taka is donated for ${title}</h2>
+    `
+
+    document.getElementById('history-section').appendChild(div);
+}

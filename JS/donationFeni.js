@@ -9,7 +9,7 @@ document
     // Checking if donation is a number
     if (isNaN(donation)) {
       alert("Failed to donate");
-      document.getElementById('input-feni').value = '';
+      document.getElementById("input-feni").value = "";
       return;
     } else {
       // Getting the present balance by number
@@ -21,9 +21,11 @@ document
         alert("Insufficiant Balance!");
         document.getElementById("input-feni").value = "";
         return;
-      } 
-      else {
-        alert(`Congratulations! You donated ${donation}Tk.`);
+      } else {
+        // Donation confirmation massage
+        donationConfirmMsg(donation);
+
+        // Equations
         const newBalanceFeni = feniBalance + donation;
         const newMainBalance = mainBalance - donation;
         document.getElementById("feni-balance").innerText = newBalanceFeni;
@@ -31,7 +33,7 @@ document
         document.getElementById("input-feni").value = "";
 
         // Adding History
-        const title = document.getElementById('feni-title').innerText;
+        const title = document.getElementById("feni-title").innerText;
         addToHistory(donation, title);
       }
     }

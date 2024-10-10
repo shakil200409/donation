@@ -21,18 +21,20 @@ document
         alert("Insufficiant Balance!");
         document.getElementById("input-noakhali").value = "";
         return;
-      } 
-      else {
+      } else {
+        // Donation confirmation massage
         donationConfirmMsg(donation);
-        
+
+        // Equations
         const newBalancenoakhali = noakhaliBalance + donation;
         const newMainBalance = mainBalance - donation;
-        document.getElementById("noakhali-balance").innerText = newBalancenoakhali;
+        document.getElementById("noakhali-balance").innerText =
+          newBalancenoakhali;
         document.getElementById("main-balance").innerText = newMainBalance;
         document.getElementById("input-noakhali").value = "";
 
         // Adding History
-        const title = document.getElementById('noakhali-title').innerText;
+        const title = document.getElementById("noakhali-title").innerText;
         addToHistory(donation, title);
       }
     }

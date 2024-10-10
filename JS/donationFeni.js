@@ -8,7 +8,7 @@ document
 
     // Checking if donation is a number
     if (isNaN(donation)) {
-      alert("Failed to donate");
+      // alert("Failed to donate");
       document.getElementById("input-feni").value = "";
       return;
     } else {

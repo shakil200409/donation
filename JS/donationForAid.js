@@ -19,13 +19,18 @@ document.getElementById('btn-donate-aid').addEventListener('click', function(eve
           alert("Insufficiant Balance!");
           document.getElementById("input-aid").value = "";
           return;
-        } else {
+        } 
+        else {
           alert(`Congratulations! You donated ${donation}Tk.`);
           const newBalanceaid = aidBalance + donation;
           const newMainBalance = mainBalance - donation;
           document.getElementById("aid-balance").innerText = newBalanceaid;
           document.getElementById("main-balance").innerText = newMainBalance;
           document.getElementById("input-aid").value = "";
+
+          // Adding History
+        const title = document.getElementById('aid-title').innerText;
+        addToHistory(donation, title);
         }
       }
 })

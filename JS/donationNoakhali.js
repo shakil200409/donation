@@ -30,6 +30,7 @@ document
         document.getElementById("main-balance").innerText = newMainBalance;
         document.getElementById("input-noakhali").value = "";
 
+        // Adding History
         const title = document.getElementById('noakhali-title').innerText;
         addToHistory(donation, title);
       }

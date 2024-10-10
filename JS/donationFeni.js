@@ -21,13 +21,18 @@ document
         alert("Insufficiant Balance!");
         document.getElementById("input-feni").value = "";
         return;
-      } else {
+      } 
+      else {
         alert(`Congratulations! You donated ${donation}Tk.`);
         const newBalanceFeni = feniBalance + donation;
         const newMainBalance = mainBalance - donation;
         document.getElementById("feni-balance").innerText = newBalanceFeni;
         document.getElementById("main-balance").innerText = newMainBalance;
         document.getElementById("input-feni").value = "";
+
+        // Adding History
+        const title = document.getElementById('feni-title').innerText;
+        addToHistory(donation, title);
       }
     }
   });

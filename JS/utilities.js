@@ -40,7 +40,7 @@ function activeBtn(id){
 // Adding history function
 function addToHistory(input, title){
     const div = document.createElement('div');
-    div.classList.add('border-2', 'border-white-gray', 'rounded-xl', 'lg:rounded-3xl', 'p-5')
+    div.classList.add('border-2', 'border-white-gray', 'rounded-xl', 'lg:rounded-3xl', 'p-5', 'my-5')
     div.innerHTML = `
     <h2 class="text-xl font-bold">${input} Taka is donated for ${title}</h2>
     `

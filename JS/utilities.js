@@ -21,6 +21,7 @@ function getBalanceNumberById(id){
 function activeSection(id){
     document.getElementById('donation-cards-container').classList.add('hidden');
     document.getElementById('history-section').classList.add('hidden');
+    document.getElementById('faq-section').classList.add('hidden');
 
     document.getElementById(id).classList.remove('hidden');
 }
@@ -70,4 +71,11 @@ function donationConfirmMsg(input){
     document.getElementById('close-btn').addEventListener('click', function(){
         div.remove();
     })
+}
+
+// Home and Blog Button function
+function btnShow(id){
+    document.getElementById('blog-btn').classList.add('hidden');
+    document.getElementById('home-btn').classList.add('hidden');
+    document.getElementById(id).classList.remove('hidden');
 }

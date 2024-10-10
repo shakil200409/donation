@@ -2,6 +2,10 @@
   font-family: "Lexend", sans-serif;
 }
 
+.font-roboto{
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   box-sizing: border-box;
   overflow-x: hidden;

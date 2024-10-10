@@ -15,6 +15,11 @@
       rel="stylesheet"
     />
 
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <!-- DaisyUI Link CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
@@ -43,8 +48,11 @@
   <body id="body">
     <header id="header" class="bg-light-coral sticky top-0 z-50 mb-10">
       <section class="container flex items-center justify-between p-3 lg:p-0">
-        <button class="font-semibold text-xl px-7 py-3 bg-btn-green rounded-xl">
+        <button id="blog-btn" class="font-semibold text-xl px-7 py-3 bg-btn-green rounded-xl">
           Blog
+        </button>
+        <button id="home-btn" class="font-semibold text-xl px-7 py-3 bg-btn-green rounded-xl hidden">
+          Home
         </button>
         <div class="lg:flex items-center hidden">
           <img class="m-5" src="assets/logo.png" alt="Logo" />
@@ -59,25 +67,30 @@
     </header>
 
     <main>
+      <!-- Features section -->
       <section class="container">
-        <!-- Features section -->
         <div class="flex justify-center">
-          <button id="btn-donation"
+          <button
+            id="btn-donation"
             class="font-semibold text-xl px-7 py-3 rounded-xl bg-btn-green hover:text-black mr-5"
           >
             Donation
           </button>
-          <button id="btn-history"
+          <button
+            id="btn-history"
             class="font-semibold text-xl px-7 py-3 rounded-xl border border-light-gray hover:border-none hover:bg-btn-green text-dark-gray hover:text-black"
           >
             History
           </button>
         </div>
+      </section>
 
-        <!-- Donation Cards -->
+      <!-- Donation Cards -->
+      <section class="container">
         <div id="donation-cards-container" class="mt-10 px-3 lg:px-0">
           <!-- Donation card for Noakhali start -->
-          <div id="noakhali-card"
+          <div
+            id="noakhali-card"
             class="card lg:card-side grid lg:grid-cols-2 border-2 border-white-gray rounded-xl lg:rounded-3xl mb-10"
           >
             <figure class="p-7 pb-0 lg:p-10 lg:pr-0">
@@ -235,12 +248,38 @@
           </div>
           <!-- End -->
         </div>
-
-        <!-- History Part -->
-         <div id="history-section" class="mt-10 px-3 lg:px-0 hidden">
-         </div>
       </section>
 
+      <!-- History Part -->
+      <section class="container">
+        <div id="history-section" class="mt-10 px-3 lg:px-0 hidden"></div>
+      </section>
+
+      <!-- FAQ Part -->
+       <section id="faq-section" class="container">
+          <div class="flex items-center">
+            <h1 class="font-roboto text-4xl font-bold my-5">Important FAQ</h1>
+            <figure class="h-14 w-14 flex items-center ml-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-15">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+              </svg>
+              
+            </figure>
+            
+          </div>
+
+          <!-- FAQ Cards Container -->
+           <div>
+            <div class="flex items-center justify-between border-2 border-white-gray rounded-xl p-5 my-5">
+              <h2 class="text-xl">What is the Document Object Model (DOM)?</h2>
+              <figure id="faq-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>                
+              </figure>
+            </div>
+           </div>
+       </section>
     </main>
 
     <footer class="bg-light-coral">
@@ -253,8 +292,8 @@
 
     <!-- JavaScript Links -->
     <script src="JS/utilities.js"></script>
-    <script src="JS/donation.js"></script>
-    <script src="JS/history.js"></script>
+    <script src="JS/faq.js"></script>
+    <script src="JS/features.js"></script>
     <script src="JS/donationNoakhali.js"></script>
     <script src="JS/donationFeni.js"></script>
     <script src="JS/donationForAid.js"></script>

@@ -23,4 +23,10 @@ document.getElementById('home-btn').addEventListener('click', function(){
 document.getElementById("blog-btn").addEventListener("click", function () {
     activeSection("faq-section");
     btnShow("home-btn");
+    document.getElementById('btn-donation').classList.remove('bg-btn-green');
+    document.getElementById('btn-history').classList.remove('bg-btn-green');
+    document.getElementById('btn-donation').classList.add('border', 'border-light-gray');
+    document.getElementById('btn-history').classList.add('border', 'border-light-gray');
+    
+    
   });

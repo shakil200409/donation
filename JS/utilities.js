@@ -28,10 +28,10 @@ function activeSection(id){
 
 // Button active after click
 function activeBtn(id){
-    document.getElementById('btn-donation').classList.add('border');
+    document.getElementById('btn-donation').classList.add('border', 'border-light-gray');
     document.getElementById('btn-donation').classList.remove('bg-btn-green', 'text-black');
 
-    document.getElementById('btn-history').classList.add('border');
+    document.getElementById('btn-history').classList.add('border', 'border-light-gray');
     document.getElementById('btn-history').classList.remove('bg-btn-green', 'text-black');
 
     document.getElementById(id).classList.remove('border');

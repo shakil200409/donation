@@ -32,9 +32,12 @@ document
         document.getElementById("main-balance").innerText = newMainBalance;
         document.getElementById("input-aid").value = "";
 
+        // Getting date and time
+        const dateTime = new Date().toLocaleString();
+
         // Adding History
         const title = document.getElementById("aid-title").innerText;
-        addToHistory(donation, title);
+        addToHistory(donation, title, dateTime);
       }
     }
   });

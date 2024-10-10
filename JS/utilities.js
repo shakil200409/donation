@@ -38,12 +38,13 @@ function activeBtn(id){
     document.getElementById(id).classList.add('bg-btn-green', 'text-black');
 }
 
-// Adding history function
-function addToHistory(input, title){
+// History function
+function addToHistory(input, title, dateTime){
     const div = document.createElement('div');
-    div.classList.add('border-2', 'border-white-gray', 'rounded-xl', 'lg:rounded-3xl', 'p-5', 'my-5')
+    div.classList.add('border-2', 'border-white-gray', 'rounded-xl', 'lg:rounded-2xl', 'p-5', 'my-5')
     div.innerHTML = `
     <h2 class="text-xl font-bold">${input} Taka is donated for ${title}</h2>
+    <p class="bg-slate-200 px-5 py-2 rounded-md mt-5">On ${dateTime}</p>
     `
 
     document.getElementById('history-section').appendChild(div);

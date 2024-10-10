@@ -47,3 +47,27 @@ function addToHistory(input, title){
 
     document.getElementById('history-section').appendChild(div);
 }
+
+// Confirmation Function
+function donationConfirmMsg(input){
+    const div = document.createElement('div');
+    div.setAttribute('id', 'confirmation-card')
+    div.classList.add('bg-stone-100', 'my-10', 'rounded-xl', 'p-5', 'lg:p-10', 'flex', 'flex-col', 'items-center', 'w-1/2', 'lg:w-2/5', 'mx-auto', 'absolute', 'inset-x-0', 'left-0', 'top-3', 'lg:top-44', 'drop-shadow-2xl');  
+    div.innerHTML = `
+    <h1 class="text-2xl lg:text-3xl font-bold mb-5">Congratulations!</h1>
+    <div class="h-10 w-10 lg:h-14 lg:w-14">
+    <img class="w-full" src="assets/coin.png">
+    </div>
+    <p class="py-5 text-dark-gray text-center">You Have Donated ${input} Taka for Humankind</p>
+    <h2 class="font-bold text-lg lg:text-2xl pb-5">Successfully</h2>
+    <button id="close-btn" class="bg-light-gray px-5 py-3 rounded-lg">Close Confirmation</button>
+    `;
+
+    document.getElementById('header').appendChild(div);
+    
+    document.getElementById('confirmation-card').classList.remove('hidden');
+    
+    document.getElementById('close-btn').addEventListener('click', function(){
+        div.remove();
+    })
+}

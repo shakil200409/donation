@@ -23,7 +23,8 @@ document
         return;
       } 
       else {
-        alert(`Congratulations! You donated ${donation}Tk.`);
+        donationConfirmMsg(donation);
+        
         const newBalancenoakhali = noakhaliBalance + donation;
         const newMainBalance = mainBalance - donation;
         document.getElementById("noakhali-balance").innerText = newBalancenoakhali;

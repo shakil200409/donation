@@ -40,8 +40,8 @@
       };
     </script>
   </head>
-  <body>
-    <header class="bg-light-coral sticky top-0 z-50 mb-10">
+  <body id="body">
+    <header id="header" class="bg-light-coral sticky top-0 z-50 mb-10">
       <section class="container flex items-center justify-between p-3 lg:p-0">
         <button class="font-semibold text-xl px-7 py-3 bg-btn-green rounded-xl">
           Blog
@@ -60,9 +60,10 @@
 
     <main>
       <section class="container">
+        <!-- Features section -->
         <div class="flex justify-center">
           <button id="btn-donation"
-            class="font-semibold text-xl px-7 py-3 rounded-xl border border-light-gray hover:border-none hover:bg-btn-green text-dark-gray hover:text-black mr-5"
+            class="font-semibold text-xl px-7 py-3 rounded-xl bg-btn-green hover:text-black mr-5"
           >
             Donation
           </button>
@@ -76,7 +77,7 @@
         <!-- Donation Cards -->
         <div id="donation-cards-container" class="mt-10 px-3 lg:px-0">
           <!-- Donation card for Noakhali start -->
-          <div
+          <div id="noakhali-card"
             class="card lg:card-side grid lg:grid-cols-2 border-2 border-white-gray rounded-xl lg:rounded-3xl mb-10"
           >
             <figure class="p-7 pb-0 lg:p-10 lg:pr-0">
@@ -153,7 +154,7 @@
                 </div>
               </div>
               <h2 id="feni-title" class="text-xl font-bold">
-                Donate for Flood Relief in Feni,Bangladesh
+                Donate for Flood Relief in Feni, Bangladesh
               </h2>
               <p class="text-dark-gray">
                 The recent floods in Feni have devastated local communities,
@@ -257,5 +258,6 @@
     <script src="JS/donationNoakhali.js"></script>
     <script src="JS/donationFeni.js"></script>
     <script src="JS/donationForAid.js"></script>
+    <script src="JS/confirmation.js"></script>
   </body>
 </html>
